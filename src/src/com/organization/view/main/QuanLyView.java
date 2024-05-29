@@ -94,23 +94,12 @@ public class QuanLyView extends javax.swing.JFrame {
         this.btnKeToan = btnKeToan;
     }
 
-    public JButton getBtnThongKe() {
-        return btnThongKe;
-    }
-
-    public void setBtnThongKe(JButton btnThongKe) {
-        this.btnThongKe = btnThongKe;
-    }
-    
-    
-
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
         pnlChucNang = new javax.swing.JPanel();
         btnTrangChu = new javax.swing.JButton();
-        btnThongKe = new javax.swing.JButton();
         btnKeToan = new javax.swing.JButton();
         btnGiamDoc = new javax.swing.JButton();
         btnQuanLyVatTu = new javax.swing.JButton();
@@ -123,8 +112,6 @@ public class QuanLyView extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         btnTrangChu.setText("Trang chủ");
-
-        btnThongKe.setText("Thống kê");
 
         btnKeToan.setText("Kế toán");
 
@@ -153,7 +140,6 @@ public class QuanLyView extends javax.swing.JFrame {
                     .addComponent(btnQuanLyVatTu, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(btnQuanLyXe, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(btnQuanLyNhanVien, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(btnThongKe, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(btnKeToan, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(btnGiamDoc, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap())
@@ -163,9 +149,7 @@ public class QuanLyView extends javax.swing.JFrame {
             .addGroup(pnlChucNangLayout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(btnTrangChu, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(btnThongKe, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGap(6, 6, 6)
                 .addComponent(btnKeToan, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(btnGiamDoc, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -226,7 +210,6 @@ public class QuanLyView extends javax.swing.JFrame {
     private javax.swing.JButton btnQuanLyVatTu;
     private javax.swing.JButton btnQuanLyXe;
     private javax.swing.JButton btnSuaChua;
-    private javax.swing.JButton btnThongKe;
     private javax.swing.JButton btnTrangChu;
     private javax.swing.JPanel pnlChucNang;
     private javax.swing.JPanel pnlHienThi;

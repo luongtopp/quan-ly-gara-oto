@@ -9,7 +9,6 @@ import src.com.organization.dao.KeToanDAO;
 import src.com.organization.dao.KyThuatVienDAO;
 import src.com.organization.dao.NguoiDungDAO;
 import src.com.organization.dao.SuaChuaDAO;
-import src.com.organization.dao.ThongKeDAO;
 import src.com.organization.dao.VatTuDAO;
 import src.com.organization.dao.XeDAO;
 import src.com.organization.model.NguoiDung;
@@ -68,9 +67,6 @@ public class QuanLyController {
         GiamDocDAO giamDocDAO = new GiamDocDAO();
         new GiamDocController((GiamDocView) giamDocView, giamDocDAO);
 
-        ThongKeDAO thongKeDAO = new ThongKeDAO();
-        new ThongKeController((ThongKeView) thongKeView, thongKeDAO);
-
         SuaChuaDAO suaChuaDAO = new SuaChuaDAO();
         new SuaChuaController((SuaChuaView) suaChuaView, suaChuaDAO, xeDAO, vatTuDAO, kyThuatVienDAO);
 
@@ -98,7 +94,6 @@ public class QuanLyController {
             View.getBtnQuanLyTaiKhoan().setVisible(false);
             View.getBtnQuanLyNhanVien().setVisible(false);
             View.getBtnGiamDoc().setVisible(false);            
-            View.getBtnThongKe().setVisible(false);            
             View.getBtnKeToan().setVisible(false);
         } else if(nguoiDung.getVaiTro().equals("KeToan")) {
              View.getBtnQuanLyTaiKhoan().setVisible(false);
@@ -169,15 +164,6 @@ public class QuanLyController {
                 cardLayout.show(View.getPnlHienThi(), "KeToanView");
             }
         });
-
-        // Gán sự kiện cho nút Kế Toán
-        View.getBtnThongKe().addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                cardLayout.show(View.getPnlHienThi(), "ThongKeView");
-            }
-        });
-
     }
 
 }

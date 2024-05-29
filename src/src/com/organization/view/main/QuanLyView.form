@@ -60,7 +60,6 @@
                       <Component id="btnQuanLyVatTu" alignment="0" max="32767" attributes="0"/>
                       <Component id="btnQuanLyXe" alignment="0" max="32767" attributes="0"/>
                       <Component id="btnQuanLyNhanVien" alignment="0" max="32767" attributes="0"/>
-                      <Component id="btnThongKe" alignment="0" max="32767" attributes="0"/>
                       <Component id="btnKeToan" alignment="0" max="32767" attributes="0"/>
                       <Component id="btnGiamDoc" alignment="0" max="32767" attributes="0"/>
                   </Group>
@@ -73,9 +72,7 @@
               <Group type="102" alignment="0" attributes="0">
                   <EmptySpace max="-2" attributes="0"/>
                   <Component id="btnTrangChu" min="-2" pref="49" max="-2" attributes="0"/>
-                  <EmptySpace max="-2" attributes="0"/>
-                  <Component id="btnThongKe" min="-2" pref="49" max="-2" attributes="0"/>
-                  <EmptySpace max="-2" attributes="0"/>
+                  <EmptySpace min="-2" pref="6" max="-2" attributes="0"/>
                   <Component id="btnKeToan" min="-2" pref="49" max="-2" attributes="0"/>
                   <EmptySpace max="-2" attributes="0"/>
                   <Component id="btnGiamDoc" min="-2" pref="49" max="-2" attributes="0"/>
@@ -98,11 +95,6 @@
         <Component class="javax.swing.JButton" name="btnTrangChu">
           <Properties>
             <Property name="text" type="java.lang.String" value="Trang ch&#x1ee7;"/>
-          </Properties>
-        </Component>
-        <Component class="javax.swing.JButton" name="btnThongKe">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="Th&#x1ed1;ng k&#xea;"/>
           </Properties>
         </Component>
         <Component class="javax.swing.JButton" name="btnKeToan">
