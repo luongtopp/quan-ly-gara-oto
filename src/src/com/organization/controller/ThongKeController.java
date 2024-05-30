@@ -28,6 +28,7 @@ public class ThongKeController {
 
     ThongKeController(ThongKeView thongKeView, ThongKeDAO thongKeDAO) {
         this.thongKeView = thongKeView;
+        showRevenueByDay();
 
         thongKeView.getBtnStatistics().addActionListener(new ActionListener() {
             @Override
@@ -48,7 +49,7 @@ public class ThongKeController {
     }
 
     private void showRevenueByDay() {
-        String sql = "SELECT NgayLapHoaDon AS 'Ngày', SUM(TongTien) AS 'Doanh thu', COUNT(*) AS 'Số lượng' FROM KeToan WHERE TrangThaiThanhToan = 'Đã thanh toán' GROUP BY Ngày";
+        String sql = "SELECT DATE(NgayLapHoaDon) AS 'Ngày', SUM(TongTien) AS 'Doanh thu', COUNT(*) AS 'Số lượng' FROM KeToan WHERE TrangThaiThanhToan = 'Đã thanh toán' GROUP BY Ngày";
         ResultSet rs = JdbcHelper.executeQuery(sql);
         displayResultSet(rs);
     }
