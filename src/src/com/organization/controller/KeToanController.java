@@ -40,7 +40,16 @@ public class KeToanController {
 
             }
         });
+        keToanView.getBtnHuy().addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
 
+                keToanView.getBtnSua().setEnabled(false);
+                keToanView.getBtnThem().setEnabled(true);
+
+                clearFields();
+            }
+        });
         keToanView.getMenuItemSua().addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {

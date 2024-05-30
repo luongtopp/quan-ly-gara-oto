@@ -30,6 +30,17 @@ public class NguoiDungController {
                 editUser();
             }
         });
+        
+        nguoiDungView.getBtnHuy().addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+
+                nguoiDungView.getBtnSua().setEnabled(false);
+                nguoiDungView.getBtnThem().setEnabled(true);
+
+                clearFields();
+            }
+        });
 
         nguoiDungView.getMenuItemSua().addActionListener(new ActionListener() {
             @Override

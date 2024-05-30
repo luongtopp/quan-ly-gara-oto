@@ -38,6 +38,17 @@ public class VatTuController {
                 }
             }
         });
+        
+         vatTuView.getBtnHuy().addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+
+                vatTuView.getBtnSua().setEnabled(false);
+                vatTuView.getBtnThem().setEnabled(true);
+
+                clearFields();
+            }
+        });
 
         vatTuView.getMenuItemSua2().addActionListener(new ActionListener() {
             @Override

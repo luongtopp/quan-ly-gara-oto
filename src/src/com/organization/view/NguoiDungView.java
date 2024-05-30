@@ -55,6 +55,7 @@ public class NguoiDungView extends javax.swing.JPanel {
         jPanel6 = new javax.swing.JPanel();
         btnThem = new javax.swing.JButton();
         btnSua = new javax.swing.JButton();
+        btnHuy = new javax.swing.JButton();
         pnlBangTaiKhoan = new javax.swing.JPanel();
         jScrollPane2 = new javax.swing.JScrollPane();
         tblNguoiDung = new javax.swing.JTable();
@@ -157,24 +158,29 @@ public class NguoiDungView extends javax.swing.JPanel {
 
         btnSua.setText("Sửa");
 
+        btnHuy.setText("Hủy");
+
         javax.swing.GroupLayout jPanel6Layout = new javax.swing.GroupLayout(jPanel6);
         jPanel6.setLayout(jPanel6Layout);
         jPanel6Layout.setHorizontalGroup(
             jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel6Layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap(217, Short.MAX_VALUE)
                 .addComponent(btnThem)
                 .addGap(59, 59, 59)
                 .addComponent(btnSua)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGap(59, 59, 59)
+                .addComponent(btnHuy)
+                .addContainerGap(141, Short.MAX_VALUE))
         );
         jPanel6Layout.setVerticalGroup(
             jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel6Layout.createSequentialGroup()
-                .addGap(0, 0, Short.MAX_VALUE)
+                .addGap(0, 3, Short.MAX_VALUE)
                 .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btnThem)
-                    .addComponent(btnSua))
+                    .addComponent(btnSua)
+                    .addComponent(btnHuy))
                 .addContainerGap())
         );
 
@@ -241,7 +247,7 @@ public class NguoiDungView extends javax.swing.JPanel {
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, 701, Short.MAX_VALUE)
+                    .addComponent(jPanel4, javax.swing.GroupLayout.DEFAULT_SIZE, 701, Short.MAX_VALUE)
                     .addComponent(pnlBangTaiKhoan, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
         );
         jPanel1Layout.setVerticalGroup(
@@ -279,7 +285,7 @@ public class NguoiDungView extends javax.swing.JPanel {
     }// </editor-fold>//GEN-END:initComponents
 
     private void tblNguoiDungMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tblNguoiDungMousePressed
-        if (evt.isPopupTrigger()) {
+        if (SwingUtilities.isRightMouseButton(evt)) {
             Point point = SwingUtilities.convertPoint(evt.getComponent(), evt.getPoint(), pnlBangTaiKhoan);
             popChucNang.show(pnlBangTaiKhoan, point.x, point.y);
         }
@@ -388,10 +394,21 @@ public class NguoiDungView extends javax.swing.JPanel {
     public void setTblNguoiDung(JTable tblNguoiDung) {
         this.tblNguoiDung = tblNguoiDung;
     }
+
+    public JButton getBtnHuy() {
+        return btnHuy;
+    }
+
+    public void setBtnHuy(JButton btnHuy) {
+        this.btnHuy = btnHuy;
+    }
+    
+    
     
     
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton btnHuy;
     private javax.swing.JButton btnSua;
     private javax.swing.JButton btnThem;
     private javax.swing.JComboBox<String> cboVaiTro;

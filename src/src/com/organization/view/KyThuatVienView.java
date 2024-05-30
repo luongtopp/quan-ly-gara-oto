@@ -51,6 +51,7 @@ public class KyThuatVienView extends javax.swing.JPanel {
         jPanel6 = new javax.swing.JPanel();
         btnThem = new javax.swing.JButton();
         btnSua = new javax.swing.JButton();
+        btnHuy = new javax.swing.JButton();
         pnlBangTaiKhoan = new javax.swing.JPanel();
         jScrollPane2 = new javax.swing.JScrollPane();
         tblKyThuatVien = new javax.swing.JTable();
@@ -148,6 +149,8 @@ public class KyThuatVienView extends javax.swing.JPanel {
 
         btnSua.setText("Sửa");
 
+        btnHuy.setText("Hủy");
+
         javax.swing.GroupLayout jPanel6Layout = new javax.swing.GroupLayout(jPanel6);
         jPanel6.setLayout(jPanel6Layout);
         jPanel6Layout.setHorizontalGroup(
@@ -157,15 +160,18 @@ public class KyThuatVienView extends javax.swing.JPanel {
                 .addComponent(btnThem)
                 .addGap(59, 59, 59)
                 .addComponent(btnSua)
+                .addGap(59, 59, 59)
+                .addComponent(btnHuy)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel6Layout.setVerticalGroup(
             jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel6Layout.createSequentialGroup()
-                .addGap(0, 0, Short.MAX_VALUE)
+                .addGap(0, 3, Short.MAX_VALUE)
                 .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btnThem)
-                    .addComponent(btnSua))
+                    .addComponent(btnSua)
+                    .addComponent(btnHuy))
                 .addContainerGap())
         );
 
@@ -283,7 +289,7 @@ public class KyThuatVienView extends javax.swing.JPanel {
     }//GEN-LAST:event_menuItemXoaMouseReleased
 
     private void tblKyThuatVienMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tblKyThuatVienMousePressed
-         if (evt.isPopupTrigger()) {
+         if (SwingUtilities.isRightMouseButton(evt)) {
             Point point = SwingUtilities.convertPoint(evt.getComponent(), evt.getPoint(), pnlBangTaiKhoan);
             popChucNang.show(pnlBangTaiKhoan, point.x, point.y);
         }
@@ -360,6 +366,16 @@ public class KyThuatVienView extends javax.swing.JPanel {
     public void setBtnSua(JButton btnSua) {
         this.btnSua = btnSua;
     }
+
+    public JButton getBtnHuy() {
+        return btnHuy;
+    }
+
+    public void setBtnHuy(JButton btnHuy) {
+        this.btnHuy = btnHuy;
+    }
+    
+    
     
     
     
@@ -376,6 +392,7 @@ public class KyThuatVienView extends javax.swing.JPanel {
         tableModel.setColumnIdentifiers(columnNames);
     }
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton btnHuy;
     private javax.swing.JButton btnSua;
     private javax.swing.JButton btnThem;
     private com.toedter.calendar.JDateChooser dateNgayThue;

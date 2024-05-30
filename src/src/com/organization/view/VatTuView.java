@@ -61,6 +61,7 @@ public class VatTuView extends javax.swing.JPanel {
         jPanel6 = new javax.swing.JPanel();
         btnThem = new javax.swing.JButton();
         btnSua = new javax.swing.JButton();
+        btnHuy = new javax.swing.JButton();
         pnlBangTaiKhoan = new javax.swing.JPanel();
         jScrollPane2 = new javax.swing.JScrollPane();
         tblVatTu = new javax.swing.JTable();
@@ -159,6 +160,8 @@ public class VatTuView extends javax.swing.JPanel {
 
         btnSua.setText("Sửa");
 
+        btnHuy.setText("Hủy");
+
         javax.swing.GroupLayout jPanel6Layout = new javax.swing.GroupLayout(jPanel6);
         jPanel6.setLayout(jPanel6Layout);
         jPanel6Layout.setHorizontalGroup(
@@ -168,15 +171,18 @@ public class VatTuView extends javax.swing.JPanel {
                 .addComponent(btnThem)
                 .addGap(59, 59, 59)
                 .addComponent(btnSua)
+                .addGap(59, 59, 59)
+                .addComponent(btnHuy)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel6Layout.setVerticalGroup(
             jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel6Layout.createSequentialGroup()
-                .addGap(0, 0, Short.MAX_VALUE)
+                .addGap(0, 3, Short.MAX_VALUE)
                 .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btnThem)
-                    .addComponent(btnSua))
+                    .addComponent(btnSua)
+                    .addComponent(btnHuy))
                 .addContainerGap())
         );
 
@@ -189,7 +195,7 @@ public class VatTuView extends javax.swing.JPanel {
                 .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(jPanel6, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(jPanel5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(8, Short.MAX_VALUE))
         );
         jPanel4Layout.setVerticalGroup(
             jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -309,7 +315,7 @@ public class VatTuView extends javax.swing.JPanel {
     }//GEN-LAST:event_menuItemXoaMouseReleased
 
     private void tblVatTuMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tblVatTuMousePressed
-       if (evt.isPopupTrigger()) {
+       if (SwingUtilities.isRightMouseButton(evt)) {
             Point point = SwingUtilities.convertPoint(evt.getComponent(), evt.getPoint(), pnlBangTaiKhoan);
             popChucNang2.show(pnlBangTaiKhoan, point.x, point.y);
         }
@@ -412,12 +418,22 @@ public JButton getBtnThem() {
     public void setMenuItemXoa(JMenuItem menuItemXoa) {
         this.menuItemXoa = menuItemXoa;
     }
+
+    public JButton getBtnHuy() {
+        return btnHuy;
+    }
+
+    public void setBtnHuy(JButton btnHuy) {
+        this.btnHuy = btnHuy;
+    }
+    
     
     
     
     
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton btnHuy;
     private javax.swing.JButton btnSua;
     private javax.swing.JButton btnThem;
     private javax.swing.JComboBox<String> cboTrangThai;
@@ -435,13 +451,9 @@ public JButton getBtnThem() {
     private javax.swing.JPanel jPanel6;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
-    private javax.swing.JMenuItem menuItemSua;
-    private javax.swing.JMenuItem menuItemSua1;
     private javax.swing.JMenuItem menuItemSua2;
     private javax.swing.JMenuItem menuItemXoa;
     private javax.swing.JPanel pnlBangTaiKhoan;
-    private javax.swing.JPopupMenu popChucNang;
-    private javax.swing.JPopupMenu popChucNang1;
     private javax.swing.JPopupMenu popChucNang2;
     private javax.swing.JTable tblVatTu;
     private javax.swing.JTextField txtDonGia;

@@ -124,7 +124,7 @@ public class QuanLyView extends javax.swing.JFrame {
 
         btnTrangChu.setText("Trang chủ");
 
-        btnThongKe.setText("Thống kê");
+        btnThongKe.setText("Báo cáo kinh doanh");
 
         btnKeToan.setText("Kế toán");
 
@@ -148,7 +148,7 @@ public class QuanLyView extends javax.swing.JFrame {
                 .addContainerGap()
                 .addGroup(pnlChucNangLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(btnTrangChu, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(btnQuanLyTaiKhoan, javax.swing.GroupLayout.DEFAULT_SIZE, 142, Short.MAX_VALUE)
+                    .addComponent(btnQuanLyTaiKhoan, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(btnSuaChua, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(btnQuanLyVatTu, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(btnQuanLyXe, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -186,7 +186,7 @@ public class QuanLyView extends javax.swing.JFrame {
         pnlHienThi.setLayout(pnlHienThiLayout);
         pnlHienThiLayout.setHorizontalGroup(
             pnlHienThiLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 757, Short.MAX_VALUE)
+            .addGap(0, 753, Short.MAX_VALUE)
         );
         pnlHienThiLayout.setVerticalGroup(
             pnlHienThiLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)

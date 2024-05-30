@@ -39,6 +39,17 @@ public class GiamDocController {
             }
         });
 
+        giamDocView.getBtnHuy().addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+
+                giamDocView.getBtnSua().setEnabled(false);
+                giamDocView.getBtnThem().setEnabled(true);
+
+                clearFields();
+            }
+        });
+
         giamDocView.getMenuItemSua().addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {

@@ -59,6 +59,7 @@ public class SuaChuaView extends javax.swing.JPanel {
         jPanel6 = new javax.swing.JPanel();
         btnThem = new javax.swing.JButton();
         btnSua = new javax.swing.JButton();
+        btnHuy = new javax.swing.JButton();
         pnlBangTaiKhoan = new javax.swing.JPanel();
         jScrollPane2 = new javax.swing.JScrollPane();
         tblSuaChua = new javax.swing.JTable();
@@ -183,6 +184,8 @@ public class SuaChuaView extends javax.swing.JPanel {
 
         btnSua.setText("Sửa");
 
+        btnHuy.setText("Hủy");
+
         javax.swing.GroupLayout jPanel6Layout = new javax.swing.GroupLayout(jPanel6);
         jPanel6.setLayout(jPanel6Layout);
         jPanel6Layout.setHorizontalGroup(
@@ -192,15 +195,18 @@ public class SuaChuaView extends javax.swing.JPanel {
                 .addComponent(btnThem)
                 .addGap(59, 59, 59)
                 .addComponent(btnSua)
+                .addGap(59, 59, 59)
+                .addComponent(btnHuy)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel6Layout.setVerticalGroup(
             jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel6Layout.createSequentialGroup()
-                .addGap(0, 0, Short.MAX_VALUE)
+                .addGap(0, 3, Short.MAX_VALUE)
                 .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btnThem)
-                    .addComponent(btnSua))
+                    .addComponent(btnSua)
+                    .addComponent(btnHuy))
                 .addContainerGap())
         );
 
@@ -305,7 +311,7 @@ public class SuaChuaView extends javax.swing.JPanel {
     }// </editor-fold>//GEN-END:initComponents
 
     private void tblSuaChuaMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tblSuaChuaMousePressed
-        if (evt.isPopupTrigger()) {
+        if (SwingUtilities.isRightMouseButton(evt)) {
             Point point = SwingUtilities.convertPoint(evt.getComponent(), evt.getPoint(), pnlBangTaiKhoan);
             popChucNang2.show(pnlBangTaiKhoan, point.x, point.y);
         }
@@ -434,14 +440,6 @@ public class SuaChuaView extends javax.swing.JPanel {
         this.menuItemSua2 = menuItemSua2;
     }
 
-    public JMenuItem getMenuItemSua1() {
-        return menuItemSua1;
-    }
-
-    public void setMenuItemSua1(JMenuItem menuItemSua1) {
-        this.menuItemSua1 = menuItemSua1;
-    }
-
     public JMenuItem getMenuItemXoa() {
         return menuItemXoa;
     }
@@ -449,11 +447,24 @@ public class SuaChuaView extends javax.swing.JPanel {
     public void setMenuItemXoa(JMenuItem menuItemXoa) {
         this.menuItemXoa = menuItemXoa;
     }
+
+    public JButton getBtnHuy() {
+        return btnHuy;
+    }
+
+    public void setBtnHuy(JButton btnHuy) {
+        this.btnHuy = btnHuy;
+    }
+    
+    
+    
+    
     
     
     
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton btnHuy;
     private javax.swing.JButton btnSua;
     private javax.swing.JButton btnThem;
     private com.toedter.calendar.JDateChooser dateNgaySuaChua;
@@ -473,13 +484,9 @@ public class SuaChuaView extends javax.swing.JPanel {
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JScrollPane jScrollPane3;
-    private javax.swing.JMenuItem menuItemSua;
-    private javax.swing.JMenuItem menuItemSua1;
     private javax.swing.JMenuItem menuItemSua2;
     private javax.swing.JMenuItem menuItemXoa;
     private javax.swing.JPanel pnlBangTaiKhoan;
-    private javax.swing.JPopupMenu popChucNang;
-    private javax.swing.JPopupMenu popChucNang1;
     private javax.swing.JPopupMenu popChucNang2;
     private javax.swing.JTable tblSuaChua;
     private javax.swing.JTextField txtChiPhi;

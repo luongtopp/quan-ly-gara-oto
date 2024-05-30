@@ -35,6 +35,17 @@ public class XeController {
                 }
             }
         });
+        
+         quanLyXeView.getBtnHuy().addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+
+                quanLyXeView.getBtnSua().setEnabled(false);
+                quanLyXeView.getBtnThem().setEnabled(true);
+
+                clearFields();
+            }
+        });
         quanLyXeView.getMenuItemSua().addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {

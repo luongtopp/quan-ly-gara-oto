@@ -48,6 +48,17 @@ public class SuaChuaController {
                 }
             }
         });
+        
+         suaChuaView.getBtnHuy().addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+
+                suaChuaView.getBtnSua().setEnabled(false);
+                suaChuaView.getBtnThem().setEnabled(true);
+
+                clearFields();
+            }
+        });
 
         suaChuaView.getMenuItemSua2().addActionListener(new ActionListener() {
             @Override

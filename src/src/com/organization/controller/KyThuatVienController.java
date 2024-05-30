@@ -39,6 +39,17 @@ public class KyThuatVienController {
                 loadKyThuatVienForEditing();
             }
         });
+        
+        kyThuatVienView.getBtnHuy().addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+
+                kyThuatVienView.getBtnSua().setEnabled(false);
+                kyThuatVienView.getBtnThem().setEnabled(true);
+
+                clearFields();
+            }
+        });
 
         kyThuatVienView.getMenuItemXoa().addActionListener(new ActionListener() {
             @Override
