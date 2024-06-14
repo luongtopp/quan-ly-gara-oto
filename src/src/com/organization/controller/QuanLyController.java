@@ -4,12 +4,12 @@ import java.awt.CardLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import javax.swing.JPanel;
+import src.com.organization.dao.BaoCaoKinhDoanhDAO;
 import src.com.organization.dao.GiamDocDAO;
 import src.com.organization.dao.KeToanDAO;
 import src.com.organization.dao.KyThuatVienDAO;
 import src.com.organization.dao.NguoiDungDAO;
 import src.com.organization.dao.SuaChuaDAO;
-import src.com.organization.dao.ThongKeDAO;
 import src.com.organization.dao.VatTuDAO;
 import src.com.organization.dao.XeDAO;
 import src.com.organization.model.NguoiDung;
@@ -20,7 +20,7 @@ import src.com.organization.view.KyThuatVienView;
 import src.com.organization.view.NguoiDungView;
 import src.com.organization.view.SuaChuaView;
 import src.com.organization.view.VatTuView;
-import src.com.organization.view.ThongKeView;
+import src.com.organization.view.BaoCaoKinhDoanhView;
 import src.com.organization.view.XeView;
 import src.com.organization.view.TrangChuView;
 
@@ -51,7 +51,7 @@ public class QuanLyController {
         this.trangChuView = new TrangChuView();
         this.giamDocView = new GiamDocView();
         this.keToanView = new KeToanView();
-        this.thongKeView = new ThongKeView();
+        this.thongKeView = new BaoCaoKinhDoanhView();
 
         NguoiDungDAO nguoiDungDAO = new NguoiDungDAO();
         new NguoiDungController((NguoiDungView) nguoiDungView, nguoiDungDAO);
@@ -68,8 +68,10 @@ public class QuanLyController {
         GiamDocDAO giamDocDAO = new GiamDocDAO();
         new GiamDocController((GiamDocView) giamDocView, giamDocDAO);
 
-        ThongKeDAO thongKeDAO = new ThongKeDAO();
-        new ThongKeController((ThongKeView) thongKeView, thongKeDAO);
+        BaoCaoKinhDoanhDAO baoCaoKinhDoanhDAO = new BaoCaoKinhDoanhDAO();
+        new BaoCaoKinhDoanhController((BaoCaoKinhDoanhView) thongKeView, baoCaoKinhDoanhDAO);
+        new TrangChuController((TrangChuView) trangChuView, baoCaoKinhDoanhDAO);
+        
 
         SuaChuaDAO suaChuaDAO = new SuaChuaDAO();
         new SuaChuaController((SuaChuaView) suaChuaView, suaChuaDAO, xeDAO, vatTuDAO, kyThuatVienDAO);
